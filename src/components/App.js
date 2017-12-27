@@ -6,7 +6,7 @@ import Tab from './Tab';
 
 class App extends Component {
   render() {
-;    return (
+    return (
       <div>
       	<MuiThemeProvider>
         <Tab/>

@@ -9,10 +9,6 @@ import {
 } from 'material-ui/Table';
 
 
-/**
- * A simple table demonstrating the hierarchy of the `Table` component and its sub-components.
- */
-
 import { getRandom, companies_list } from './companies_list';
 import './Table.css';
 
@@ -28,10 +24,9 @@ class TableExampleSimple extends React.Component {
   
   render(){
     return (
-       <Table displayRowCheckbox={false}>
-        <TableHeader>
+       <Table>
+        <TableHeader displaySelectAll={false} adjustForCheckbox={false}> 
           <TableRow>
-            <TableHeaderColumn>Id</TableHeaderColumn>
             <TableHeaderColumn>Code</TableHeaderColumn>
             <TableHeaderColumn>Company</TableHeaderColumn>
             <TableHeaderColumn>Price</TableHeaderColumn>
@@ -40,11 +35,10 @@ class TableExampleSimple extends React.Component {
             <TableHeaderColumn>%Change</TableHeaderColumn>
           </TableRow>
         </TableHeader>
-        <TableBody>
+        <TableBody displayRowCheckbox={false}>
             {
               this.state.companies_list.map((item) => (
                 <TableRow key={item.id}>
-                  <TableRowColumn>{item.id}</TableRowColumn>
                   <TableRowColumn className={'code'}>{item.code}</TableRowColumn>
                   <TableRowColumn className={'company'}>{item.name}</TableRowColumn>
                   <TableRowColumn>{item.price}</TableRowColumn>
@@ -105,8 +99,7 @@ class TableExampleSimple extends React.Component {
           })
         }
       })
-    }, 1000) 
-    
+    }, 5000) 
   }
  
 }

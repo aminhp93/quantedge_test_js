@@ -68,7 +68,7 @@ export function getRandom(min, max){
 var i;
 for (i = 0; i < companies_list.length; i++){
   companies_list[i].id = i
-  companies_list[i].price = getRandom(0, 100).toFixed(2)
+  companies_list[i].price = getRandom(0.01, 99.99).toFixed(2)
   companies_list[i].volume = Math.floor(getRandom(1000, 1000000))
   companies_list[i].value = Math.floor((companies_list[i].volume) * (companies_list[i].price))
 }
