@@ -8,8 +8,8 @@ import {
   TableRowColumn,
 } from 'material-ui/Table';
 
-
-import { getRandom, companies_list } from './companies_list';
+import NumberFormat from 'react-number-format';
+import { getRandom, companies_list } from '../companies_list';
 import './Table.css';
 
 class TableExampleSimple extends React.Component {
@@ -19,7 +19,6 @@ class TableExampleSimple extends React.Component {
     this.state = {
       companies_list: companies_list
     }
-    
   }
   
   render(){
@@ -41,16 +40,20 @@ class TableExampleSimple extends React.Component {
                 <TableRow key={item.id}>
                   <TableRowColumn className={'code'}>{item.code}</TableRowColumn>
                   <TableRowColumn className={'company'}>{item.name}</TableRowColumn>
-                  <TableRowColumn>{item.price}</TableRowColumn>
-                  <TableRowColumn>{item.value}</TableRowColumn>
-                  <TableRowColumn className={
-                      item.change > 0 ? 'changeUp' : 'changeDown'
-                  }>
+                  <TableRowColumn>
+                    <NumberFormat value={item.price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
+                  </TableRowColumn>
+                  <TableRowColumn>
+                    <NumberFormat value={item.value} displayType={'text'} thousandSeparator={true} prefix={'$'} />
+                  </TableRowColumn>
+                  <TableRowColumn 
+                    className={item.change > 0 ? 'changeUp' : 'changeDown'}
+                  >
                     {item.change || 0}
                   </TableRowColumn>
-                  <TableRowColumn className={
-                      item.change > 0 ? 'changeUp' : 'changeDown'
-                  }>
+                  <TableRowColumn
+                    className={item.change > 0 ? 'changeUp' : 'changeDown'}
+                  >
                     {item.percentChange || 0}%
                   </TableRowColumn>
                 </TableRow>
@@ -75,7 +78,7 @@ class TableExampleSimple extends React.Component {
   
         var new_volume = Math.round(parseInt(item.volume)) + Math.round(getRandom(10, 30))
 
-        item.value = (new_volume * new_price).toFixed(2)
+        item.value = Math.floor(new_volume * new_price)
         item.price = new_price.toFixed(2)
         item.change = diff.toFixed(2)
         

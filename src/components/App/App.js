@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import Tab from './Tab';
+import Tab from '../Tab/Tab';
 
 
 class App extends Component {
@@ -9,9 +9,8 @@ class App extends Component {
     return (
       <div>
       	<MuiThemeProvider>
-        <Tab/>
-        
-      </MuiThemeProvider>
+        	<Tab/>
+      	</MuiThemeProvider>
       </div>
     );
   }

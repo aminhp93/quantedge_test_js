@@ -1,6 +1,7 @@
 import React from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
-import Table from './Table';
+
+import Table from '../Table/Table';
 
 
 const TabsExampleSimple = () => (
