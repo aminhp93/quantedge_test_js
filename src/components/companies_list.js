@@ -51,13 +51,73 @@ export const companies_list = [
       code: 'FMG.AX',
       name: 'FORTESCUE METALS GROUP LTD'
     },
-	{
-      code: 'TLS.AX',
-      name: 'TELSTRA CORPORATION LIMITED'
-    },
-	{
+  	{
+        code: 'TLS.AX',
+        name: 'TELSTRA CORPORATION LIMITED'
+      },
+  	{
       code: 'CWN.AX',
       name: 'CROWN RESORTS LIMITED'
+    },
+    {
+      code: 'CBA.AX2',
+      name: 'COMMONWEALTH BANK OF AUSTRALIA2'
+    },
+    {
+      code: 'SRX.AX2',
+      name: 'SIRTEX MEDICAL LIMITED2'
+    },
+    {
+      code: 'ANZ.AX2',
+      name: 'AUSTRALIA AND NEW ZEALAND BANKING GROUP LIMITED2'
+    },
+    {
+      code: 'BHP.AX2',
+      name: 'BHP BILLITON LIMITED2'
+    },
+    {
+      code: 'WBC.AX2',
+      name: 'WESTPAC BANKING CORPORATION2'
+    },
+    {
+      code: 'NAB.AX2',
+      name: 'NATIONAL AUSTRALIA BANK LIMITED2'
+    },
+    {
+      code: 'MQG.AX2',
+      name: 'MACQUARIE GROUP LIMITED2'
+    },
+    {
+      code: 'QBE.AX2',
+      name: 'QBE INSURANCE GROUP LIMITED2'
+    },
+    {
+      code: 'RIO.AX2',
+      name: 'RIO TINTO LIMITED2'
+    },
+    {
+      code: 'WES.AX2',
+      name: 'WESFARMERS LIMITED2'
+    },
+    {
+      code: 'CSL.AX2',
+      name: 'CSL LIMITED2'
+    },
+    {
+      code: 'FMG.AX2',
+      name: 'FORTESCUE METALS GROUP LTD2'
+    },
+    {
+      code: 'FMG.AX2',
+      name: 'FORTESCUE METALS GROUP LTD2'
+    },
+    {
+        code: 'TLS.AX2',
+        name: 'TELSTRA CORPORATION LIMITED2'
+      },
+    {
+      code: 'CWN.AX2',
+      name: 'CROWN RESORTS LIMITED2'
     }
  ]
 

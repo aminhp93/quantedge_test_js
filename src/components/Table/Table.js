@@ -7,10 +7,11 @@ import {
   TableRow,
   TableRowColumn,
 } from 'material-ui/Table';
-
 import NumberFormat from 'react-number-format';
-import { getRandom, companies_list } from '../companies_list';
+
 import './Table.css';
+import { getRandom, companies_list } from '../companies_list';
+
 
 class TableExampleSimple extends React.Component {
   constructor(props){
@@ -78,21 +79,23 @@ class TableExampleSimple extends React.Component {
   
         var new_volume = Math.round(parseInt(item.volume)) + Math.round(getRandom(10, 30))
 
+        // New value, price, change
         item.value = Math.floor(new_volume * new_price)
         item.price = new_price.toFixed(2)
         item.change = diff.toFixed(2)
         
+        // Result based on tabs TOP_GAINERS, TOP_LOSERS
         if (this.props.filter === 'top_gainers'){
           return this.setState({
             companies_list: companies_list.sort(function (a, b) {
               return b.value - a.value;
-            }).slice(0, 3)
+            }).slice(0, 20)
           })
         } else if (this.props.filter === 'top_losers'){
           return this.setState({
             companies_list: companies_list.sort(function (a, b) {
               return a.value - b.value;
-            }).slice(0, 3)
+            }).slice(0, 20)
           })
         } else {
           return this.setState({
